@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3641cb2c93d1147329c8613720b5d38b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ball: {fileID: 2679806300996291369, guid: 9bce193ed8d28416a9adf9b20b31e868, type: 3}
+  - player: {fileID: 150134710521834442, guid: 441037ebba41d4b828b943f7ab8d7c16, type: 3}
+  - enemy: {fileID: 4242981128842410164, guid: 9b8b53a9c950345a18f2508921416837, type: 3}
+  - ballSpawn: {instanceID: 0}
+  - playerSpawn: {instanceID: 0}
+  - enemySpawn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
