@@ -57,6 +57,12 @@ public class GameManager : MonoBehaviour
         
         // TODO 3:
         await _lowerHandle.SwitchTo(sb, 50.0f);
+        //disable possible physical impact of ithandle
+        var rb = _lowerHandle.GetComponent<Rigidbody>();
+        if (rb != null) rb.isKinematic = true;
+        Collider col = _lowerHandle.GetComponent<Collider>();
+        if (col != null) col.enabled = false;
+
         _upperHandle.Free();
     }
 
