@@ -32,12 +32,13 @@ public class GameManager : MonoBehaviour
         Introduction();
     }
     
+    
     async void Introduction()
     {
         Level level = GetComponent<Level>();
         await level.PlayIntroduction(0.2f, 3000);
         await Task.Delay(1000);
-        
+
         // TODO 2:
         await StartGame();
     }
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
         
         // TODO 3:
         await _lowerHandle.SwitchTo(sb, 50.0f);
+
         //disable possible physical impact of ithandle
         var rb = _lowerHandle.GetComponent<Rigidbody>();
         if (rb != null) rb.isKinematic = true;
