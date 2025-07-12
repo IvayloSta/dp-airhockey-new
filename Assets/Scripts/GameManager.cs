@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     async void Introduction()
     {
         Level level = GetComponent<Level>();
-        await level.PlayIntroduction(0.2f, 3000);
+        await level.PlayIntroduction(1f, 3000); // 0.2f
         await Task.Delay(1000);
 
         // TODO 2:
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         GameObject sb = Instantiate(ball, ballSpawn);
         
         // TODO 3:
-        await _lowerHandle.SwitchTo(sb, 50.0f);
+        await _lowerHandle.SwitchTo(sb, 100.0f); //50.0f
 
         //disable possible physical impact of ithandle
         var rb = _lowerHandle.GetComponent<Rigidbody>();

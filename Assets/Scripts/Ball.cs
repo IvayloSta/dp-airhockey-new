@@ -6,8 +6,9 @@ using DualPantoToolkit;
 
 public class Ball : MonoBehaviour {
 
-    public float startingSpeed = 6f; //3f
-    public float maxSpeed = 10f; //5f
+    public float startingSpeed = 4f; //3f
+    public float maxSpeed = 7f; //5f
+    public bool easy = false;
     private PlayerSoundEffect soundEffects;
     private float speed;
     private Vector3 initPosition = new Vector3(0, 0, -6f);
@@ -50,7 +51,17 @@ public class Ball : MonoBehaviour {
     void Reset()
     {
         transform.position = initPosition;
-        int initAngle = UnityEngine.Random.Range(-20, 20);
+        int initAngle = 0;
+        if (easy)
+        {
+            initAngle = UnityEngine.Random.Range(-20, 20);
+        }
+        else
+        {
+            int initAngleLeft = UnityEngine.Random.Range(-65, -25);
+            int initAngleRight = UnityEngine.Random.Range(25, 65);
+            initAngle = UnityEngine.Random.Range(0, 2) == 0 ? initAngleLeft : initAngleRight;
+        }
         direction = Quaternion.Euler(0, initAngle, 0) * new Vector3(0, 0, -1);
         speed = startingSpeed;
         rb.velocity = direction.normalized * speed;
