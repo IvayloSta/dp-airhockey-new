@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     async void Introduction()
     {
         Level level = GetComponent<Level>();
-        await level.PlayIntroduction(1f, 3000); // 0.2f
+        await level.PlayIntroduction(0.3f, 3000); // 0.2f
         await Task.Delay(1000);
 
         // TODO 2:

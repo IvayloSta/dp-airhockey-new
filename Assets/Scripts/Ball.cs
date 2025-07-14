@@ -7,7 +7,7 @@ using DualPantoToolkit;
 public class Ball : MonoBehaviour {
 
     public float startingSpeed = 4f; //3f
-    public float maxSpeed = 7f; //5f
+    public float maxSpeed = 5f; //5f
     public bool easy = false;
     private PlayerSoundEffect soundEffects;
     private float speed;
